@@ -1,0 +1,1289 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --primary_color: #e41712;
+  --backgroundLightGreen: #fff5f5;
+}
+
+/* Section 1: Common CSS for Navigation, Header, Footer
+
+/************CSS for Header and Navigation ******************/
+
+header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 80%;
+  justify-content: space-around;
+  padding: 2px;
+  padding-top: 10px;
+}
+h2,
+a,
+h3 {
+  color: var(--primary_color);
+}
+#headerlogo {
+  text-transform: uppercase;
+  /*****************************************Fluid Typography************************/
+  font-size: clamp(5vw, 5vw, 3vw);
+  letter-spacing: 0.5px;
+  color: #fff;
+  text-shadow: 3px 3px black;
+}
+@keyframes shakeText {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#headerlogo:hover {
+  /* text-shadow: 0 0 1px #fff, 0 0 2px #fff; */
+  transition-duration: 0.3s;
+  animation: shakeText 0.8s ease forwards;
+}
+
+h1,
+nav,
+footer {
+  font-family: "Roboto", serif;
+}
+
+body,
+h2,
+h3,
+span {
+  font-family: "Poppins", "Gabriola", sans-serif;
+}
+
+#buttonFontSize {
+  display: inline;
+  position: absolute;
+  line-height: 20px;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  width: 200px;
+  height: 22px;
+  right: 5%;
+  text-align: center;
+}
+#buttonFontSize button {
+  width: 30%;
+  background-color: var(--backgroundLightGreen);
+  color: var(--primary_color);
+}
+#buttonFontSize button:hover {
+  color: var(--backgroundLightGreen);
+  background-color: var(--primary_color);
+}
+
+header,
+footer {
+  background-color: var(--primary_color);
+}
+#logo1 {
+  height: 30px;
+  width: 100%;
+}
+#logo1 img {
+  height: 100%;
+  width: 30px;
+}
+#searchBtn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#searchBtn button {
+  width: 150px;
+  background-color: var(--primary_color);
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+/******Nav Bar**************/
+.social {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.social img {
+  width: 20%;
+}
+#nav {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 60%;
+  justify-content: start;
+  align-items: center;
+}
+#nav #logo {
+  width: 100%;
+}
+
+#nav #logo img {
+  height: 120px;
+  width: 120px;
+}
+
+#nav #logo:hover img {
+  transform: scale(1.15);
+  transition-duration: 0.6s;
+}
+#nav #navdiv {
+  width: 100%;
+}
+#nav #navdiv ul {
+  text-align: end;
+}
+#nav #navdiv ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 16px 32px;
+}
+#nav #navdiv ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+#nav #navdiv ul li:hover a {
+  color: var(--primary_color);
+  text-shadow: 0px 0px 2px var(--primary_color);
+  font-weight: 1000;
+  transition-duration: 0.6s;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.alert {
+  padding: 10px;
+  background-color: var(--backgroundLightGreen);
+  text-align: center;
+  font-size: 1.1rem;
+}
+.about3 {
+  width: 90%;
+
+  margin-left: 5%;
+  margin-bottom: 30px;
+}
+.about3 img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.abouth2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--primary_color);
+  font-size: 3vw;
+}
+
+.abouth3 {
+  text-align: center;
+
+  counter-reset: var(--primary_color);
+  font-size: 1vw;
+  color: black;
+  margin-bottom: 10px;
+}
+.homeh3 {
+  text-align: center;
+  font-size: 1.2rem;
+  color: black;
+}
+.imageContainer1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+img {
+  max-width: 800%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/********************* CSS for Footer ********************************/
+footer .itemfooter:nth-child(1),
+footer .itemfooter:nth-child(2) {
+  border-right: 2px groove white;
+}
+
+footer {
+  font-size: smaller;
+  padding: 15px 9%;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+footer .itemfooter {
+  width: 32%;
+  padding-left: 12%;
+}
+footer nav ul li {
+  display: block;
+  padding: 1.5px;
+}
+footer nav ul li a {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+footer nav ul li:hover a {
+  color: #fff;
+  text-shadow: 0px 0px 1.5px #fff;
+}
+#copyright {
+  font-family: serif;
+  font-style: italic;
+  width: 100%;
+  text-align: center;
+}
+footer h4 {
+  font-size: 1.3rem;
+}
+footer ul li {
+  list-style: none;
+  font-size: 1rem;
+  padding: 2px;
+}
+
+/*****************************CSS for Home Page **********************************/
+
+.home-header-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+.home-header-container img {
+  display: block;
+  width: 100%;
+
+  object-fit: cover;
+}
+.home-header-container1 {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+.productsheader {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--primary_color);
+  font-size: 5vw;
+  font-weight: 1000;
+  margin-bottom: 10px;
+}
+
+.home-header-container1 img {
+  display: block;
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+}
+
+.header-img-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: #fff;
+  padding: 12px 22px;
+  /*****************************************Fluid Typography************************/
+  font-size: clamp(3vw, 5vw, 2vw);
+  text-align: center;
+  text-shadow: 3px 3px var(--primary_color);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+main {
+  margin-bottom: 20px;
+}
+
+/**********Home page section 1 text description***********/
+main #homesection1 {
+  margin-top: 50px;
+  /**************Grid view with three columns *************************************************/
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: space-around;
+  background-color: var(--backgroundLightGreen);
+  padding: 15px;
+}
+
+main h2 {
+  text-transform: uppercase;
+  /*****************************************Fluid Typography************************/
+  font-size: clamp(2.2vw, 5vw, 1.7vw);
+  margin-top: 25px;
+}
+#homebodyText {
+  font-size: 1.2rem;
+  text-align: justify;
+  padding: 15px;
+}
+#homeitem1h3 {
+  /*****************************************Fluid Typography************************/
+  font-size: clamp(2vw, 5vw, 1.5vw);
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  font-weight: 1000;
+  /* border-top: 3px solid var(--primary_color); */
+}
+#homeitem1 p {
+  color: var(--primary_color);
+  font-size: 1.5vw;
+  font-weight: 1000;
+}
+main #homesection1 #h2Title {
+  grid-column: 1/ 3;
+}
+main #homesection1 #homeitem1,
+#homeitem2 {
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#homeitem1 p {
+  font-size: 1.2rem;
+}
+main #homesection1 div p {
+  width: 80%;
+  margin: auto;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#homebuybtn {
+  width: 300px;
+  height: 100px;
+  color: var(--backgroundLightGreen);
+  background-color: var(--primary_color);
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  font-size: 2rem;
+}
+
+#homebuybtn:hover {
+  background-color: var(--backgroundLightGreen);
+  color: var(--primary_color);
+  border: 4px solid var(--primary_color);
+  /* font-weight: 800; */
+  transition-duration: 0.9s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/***********Home section 2 with cart Picture***************/
+
+#homeitem2 #imageContainer {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 10px;
+}
+#homeitem2 #imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#homeitem2 #imageContainer img:hover {
+  transform: scale(1.03);
+  transition-duration: 0.6s;
+}
+#homeitem2 #imageContainer:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(0, 0, 0, 0.5);
+  transition-duration: 0.6s;
+}
+
+/********* Welcone Text *****************/
+#homeitem3 {
+  grid-column: 1 / span 2;
+  padding: 0 1.2rem;
+}
+#homebodyText {
+  width: 100%;
+  height: 100%;
+  text-align: justify;
+  font-size: 1.5vw;
+  color: var(--primary_color);
+  font-weight: 1000;
+}
+/**********Home page section 4 Banner***********/
+
+#homeitem4 {
+  border-radius: 10px;
+  grid-row: 1 / 3;
+  grid-column: 3;
+  border: 5px solid rgb(215, 221, 106);
+  height: 100%;
+  background-color: rgb(247, 249, 228);
+}
+#homeitem4 h3 {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(221, 221, 106);
+  color: red;
+  padding: 10px 0;
+}
+#homeitem4 .container p {
+  margin-top: 80px;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  font-weight: 1000;
+}
+#homeitem4 .container {
+  position: relative;
+}
+#changing-text img {
+  width: 100px;
+  height: 100px;
+}
+#changing-text2 img {
+  width: 100px;
+  height: 100px;
+}
+#changing-text,
+#changing-text2 {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: red;
+  font-family: Arial, sans-serif;
+  opacity: 0; /* Initially hide both paragraphs */
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+  padding: 0;
+  animation: changeText 10s infinite alternate;
+  margin-top: 50px;
+}
+#changing-text2 {
+  animation-delay: 5s; /* Delay the start of the animation for the second paragraph */
+}
+
+@keyframes changeText {
+  0%,
+  100% {
+    opacity: 0;
+  } /* Both paragraphs are fully transparent at start and end */
+  50% {
+    opacity: 1;
+  } /* One paragraph fades in while the other fades out */
+}
+/*****************************CSS for Check Out Page **********************************/
+
+.check {
+  background-size: cover;
+  animation: backgroundChange 15s infinite;
+}
+
+@keyframes backgroundChange {
+  0% {
+    background-image: url("./imgs/grocery1.jpg");
+  }
+  33% {
+    background-image: url("./imgs/grocery2.jpg");
+  }
+  66% {
+    background-image: url("./imgs/grocery3.webp");
+  }
+  100% {
+    background-image: url("./imgs/grocery1.jpg");
+  }
+}
+
+.check_container {
+  max-width: 700px;
+  margin: 70px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+input[type="submit"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/*****************************CSS for Products Page **********************************/
+.cardContainer {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 80vw;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+
+  /* background-color: rgb(207, 188, 163); */
+}
+
+.cardContainer {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 80vw;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+
+  /* background-color: rgb(207, 188, 163); */
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #9bc5b0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 3px 3px 20px rgb(230, 230, 230);
+  padding: 10px;
+}
+
+.cards:hover .productImg {
+  transform: scale(1.1);
+  transition-duration: 200ms;
+}
+
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  height: 14rem;
+}
+
+.productImg {
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.7rem 0;
+}
+
+.decsriptionContainer,
+.priceContainer {
+  color: rgb(37, 37, 37);
+  font-size: 0.9rem;
+}
+
+.cardFooter {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 80%;
+  justify-content: center;
+
+  align-items: center;
+}
+
+.cartBtn {
+  /* background-color: var(--primary_color); */
+  background-color: white;
+  border: 1px solid var(--primary_color);
+  color: var(--primary_color);
+  height: 1.8rem;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
+
+.cartBtn:hover {
+  background-color: var(--primary_color);
+  color: white;
+  cursor: pointer;
+}
+
+/*****************************CSS for Check Out Page **********************************/
+.check {
+  background-size: cover;
+  animation: backgroundChange 15s infinite;
+}
+
+@keyframes backgroundChange {
+  0% {
+    background-image: url("./imgs/grocery1.jpg");
+  }
+  33% {
+    background-image: url("./imgs/grocery2.jpg");
+  }
+  66% {
+    background-image: url("./imgs/grocery3.webp");
+  }
+  100% {
+    background-image: url("./imgs/grocery1.jpg");
+  }
+}
+
+.check_container {
+  max-width: 700px;
+  margin: 70px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+input[type="submit"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+/*****************************CSS for About Us Page **********************************/
+
+.section {
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(221, 238, 223);
+}
+
+.container {
+  width: 50%;
+  display: flex;
+  margin: 20px;
+  padding-top: 10px;
+}
+.content-section {
+  float: left;
+  width: 100%;
+}
+.content-section .title {
+  text-transform: uppercase;
+  font-size: 28px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: var(--primary_color);
+  text-shadow: 2px 2px 8px #793939;
+  text-align-last: center;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+/*  animation for hover effect */
+.content-section .title:hover {
+  animation: shake 0.8s ease forwards;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.content-section .content h3 {
+  margin-top: 20px;
+
+  font-size: 10px;
+}
+.content-section .content p {
+  margin-top: 10px;
+  font-size: 17px;
+  line-height: 1.2;
+  text-align: left;
+  text-align: justify;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.colom {
+  display: grid;
+  grid-template-columns: repeat(3, 25%);
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.staff {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+.product:hover {
+  transform: scale(1.05);
+}
+
+.staff img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.staff:hover img {
+  transform: scale(1.1);
+}
+.staff-info {
+  margin-top: 10px;
+}
+@keyframes glow {
+  0% {
+    text-shadow: 1px 1px 1px #000000;
+  }
+  50% {
+    text-shadow: 3px 3px 3px #009688;
+  }
+  100% {
+    text-shadow: 1px 1px 1px #000000;
+  }
+}
+.staff p {
+  color: #795548;
+  text-align-last: center;
+  font-style: italic;
+}
+.staff-details {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(122, 117, 117, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+}
+.staff-info {
+  text-align: center;
+}
+
+.staff-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.staff-info p {
+  margin: 5px 0;
+  color: #666;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+/*****************************CSS for Contact Page **********************************/
+
+#contact-main {
+  background-image: url(../Public/imgs/background.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.btn {
+  background-color: #ff9800;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.contact {
+  padding: 50px 0;
+  text-align: center;
+}
+.contact h2 {
+  background-color: var(--backgroundLightGreen);
+  padding: 20px;
+}
+
+.contact .btn {
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.contact .btn:hover {
+  background-color: #27ae60;
+}
+.contact .form {
+  width: 100%;
+
+  background-image: url(../Public/imgs/background.png);
+
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+  opacity: 0.6;
+  border-bottom: 10px solid var(--backgroundLightGreen);
+}
+
+.contact .contact-form {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 10px;
+  padding-right: 30px;
+
+  /* background-image: url('https://wallpaperaccess.com/full/185289.jpg'); */
+}
+
+.contact h2 {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-group textarea {
+  height: 150px;
+}
+
+.map-responsive {
+  height: 0;
+  padding: 20px;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.map-responsive iframe {
+  height: 100%;
+  width: 95%;
+  left: 50%;
+  transform: translate(-50%);
+  position: absolute;
+  top: 0;
+}
+
+/***********************CSS for Tablet view************************/
+@media only screen and (max-width: 1248px) {
+  /**************Grid view with Two columns *************************************************/
+  main #homesection1 {
+    grid-template-columns: 58% 40%;
+  }
+  #homeitem4 {
+    grid-column: 1 / -1;
+    grid-row: 4;
+  }
+
+  .home-header-container img {
+    display: block;
+    width: 100%;
+
+    object-fit: cover;
+    opacity: 0.4;
+  }
+
+  #homebodyText {
+    font-size: 1.5vw;
+  }
+
+  nav ul li a {
+    font-size: 1.4rem;
+  }
+  footer nav ul li a {
+    color: #fff;
+    font-size: 0.8rem;
+  }
+  footer h4 {
+    font-size: 1.1rem;
+  }
+  footer ul li {
+    font-size: 0.8rem;
+  }
+  #homeitem1 p {
+    font-size: 1rem;
+  }
+  #homebodyText {
+    font-size: 1rem;
+    text-align: justify;
+    padding: 15px;
+  }
+  main h2 {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    margin-top: 25px;
+  }
+  #login {
+    font-size: 1.1rem;
+  }
+  .homebuybtn {
+    font-size: 1.5rem;
+  }
+  #homeitem4 {
+    height: 15rem;
+    margin-top: 20px;
+  }
+  #homeitem4 .container p {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    font-weight: 1000;
+  }
+  #changing-text,
+  #changing-text2 {
+    text-align: center;
+
+    margin-top: 10px;
+  }
+  main #homesection1 #h2Title {
+    grid-column: 1/ 3;
+  }
+
+  #homebuybtn {
+    width: 300px;
+    height: 80px;
+    color: var(--backgroundLightGreen);
+    background-color: var(--primary_color);
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    font-size: 1.5rem;
+  }
+  /**********************Products page  table******************/
+  .cardContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /**********************About us page Tablet******************/
+  .container {
+    width: 90%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .colom {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    justify-content: space-around;
+    gap: 30px;
+  }
+
+  .staff {
+    padding: 15px;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    padding-top: 20px;
+  }
+
+  /**********************Products page for table******************/
+  .cardContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /**********************About us page Tablet******************/
+  .container {
+    width: 90%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .colom {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .staff {
+    padding: 15px;
+  }
+
+  header {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  #nav {
+    grid-template-columns: 1fr;
+  }
+
+  #nav #navdiv ul {
+    display: block;
+    text-align: center;
+    border-bottom: 5px solid rgb(244, 187, 187);
+  }
+  #nav #navdiv ul li {
+    display: block;
+    text-align: center;
+  }
+
+  #searchBtn {
+    justify-content: center;
+    text-align: center;
+  }
+  .abouth3 {
+    text-align: center;
+
+    counter-reset: var(--primary_color);
+    font-size: 1.5vw;
+    color: black;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  /**************Grid view with One columnn *************************************************/
+  main #homesection1 {
+    grid-template-columns: 95%;
+  }
+  main #homesection1 #h2Title {
+    grid-column: 1/ 1;
+  }
+  .cardContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/***********************CSS for mobile view************************/
+@media only screen and (max-width: 800px) {
+  footer .itemfooter {
+    width: 100%;
+  }
+  footer .itemfooter {
+    display: block;
+    padding-left: 40%;
+    margin-bottom: 60px;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .homebuybtn {
+    font-size: 1.2rem;
+  }
+  nav ul li {
+    display: block;
+    text-align: center;
+  }
+  footer nav ul li {
+    display: block;
+    text-align: left;
+  }
+
+  #login {
+    font-size: 0.8rem;
+  }
+  main #homesection1 #h2Title {
+    grid-column: 1/ 1;
+  }
+  .overlay-text {
+    font-size: 2.5rem;
+    width: 100%;
+  }
+  footer .itemfooter:nth-child(1),
+  footer .itemfooter:nth-child(2) {
+    border-right: none;
+  }
+  main #homesection1 {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 95%;
+    justify-content: space-around;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
+  footer nav ul li a {
+    color: #fff;
+    font-size: 0.8rem;
+  }
+
+  footer h4 {
+    font-size: 1.1rem;
+  }
+  footer ul li {
+    font-size: 0.8rem;
+  }
+  #homeitem1 p {
+    font-size: 1rem;
+  }
+  #homebodyText {
+    font-size: 1rem;
+    text-align: justify;
+    padding: 15px;
+  }
+  main h2 {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    margin-top: 25px;
+  }
+
+  #homeitem1h3 {
+    font-size: 1.2rem;
+  }
+  #homeitem1 p {
+    font-size: 0.8rem;
+  }
+  #homeitem4 .container p {
+    margin-top: 5px;
+    font-size: 1rem;
+    line-height: 2.5rem;
+    font-weight: 1000;
+  }
+
+  /**********************About us page Mobile******************/
+  .container {
+    width: 90%; /* Adjust width as needed */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .colom {
+    display: grid;
+    grid-template-columns: 60%;
+    justify-content: space-around;
+    gap: 30px;
+  }
+
+  .staff {
+    padding: 15px;
+  }
+
+  .staff img {
+    margin-bottom: 15px;
+  }
+
+  .staff-details {
+    bottom: 15px;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .content-section .title {
+    text-align: center;
+  }
+  .cardContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .check_container {
+    max-width: 85%;
+    margin: 70px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+}
