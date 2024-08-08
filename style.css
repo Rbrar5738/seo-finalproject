@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --primary_color: #e41712;
+  --primary_color: #c11411;
   --backgroundLightGreen: #fff5f5;
 }
 
@@ -138,8 +138,8 @@ footer {
 }
 
 #nav #logo img {
-  height: 120px;
-  width: 120px;
+  height: 110px;
+  width: 160px;
 }
 
 #nav #logo:hover img {
@@ -291,10 +291,12 @@ footer ul li {
 .productsheader {
   text-align: center;
   text-transform: uppercase;
-  color: var(--primary_color);
-  font-size: 5vw;
+  background-color: var(--primary_color);
+  color: white;
+  font-size: 8vw;
   font-weight: 1000;
   margin-bottom: 10px;
+  padding: 50px;
 }
 
 .home-header-container1 img {
